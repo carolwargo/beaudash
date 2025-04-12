@@ -758,7 +758,7 @@ export default function ResumePage() {
 
   {/*Start Right Column Quarter*/}
             <div className="w3-quarter bg-white flex-column justify-content-center align-items-center  ">
-              <div className="border border-2 rounded ">
+              <div className="border rounded ">
                 <div className="w3-content">
                   <div className="shadow-lg">
                     <div className="container py-2">

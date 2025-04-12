@@ -1,7 +1,7 @@
 import React from "react";
-import './LoginPage.css'; // Import CSS for styling
+import './HomePage.css'; // Import CSS for styling
 import AuthForm from "../../components/AuthForm/AuthForm";
-const LoginPage = () => {   
+const HomePage = () => {   
 
     return (
         <div class="login-page">
@@ -17,4 +17,4 @@ const LoginPage = () => {
 }
 
 
-export default LoginPage;
+export default HomePage;
