@@ -250,7 +250,7 @@ export default function ResumePage() {
                   </div>
                 </div>
                       <div className="w3-container my-2">
-                        <div className="row small">
+                        <div className="row">
                           <div className="col-md-6">
                             <a
                               href="mail:carolwargo.dev@gmail.com"
@@ -755,7 +755,7 @@ export default function ResumePage() {
             {/*End Middle Column Half*/}
 
   {/*Start Right Column Quarter*/}
-            <div className="w3-quarter bg-white flex-column justify-content-center align-items-center  ">
+            <div className="w3-quarter  flex-column justify-content-center align-items-center  ">
               <div className="border rounded ">
                 <div className="w3-content">
                   <div className="shadow-lg">

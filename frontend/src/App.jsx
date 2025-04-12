@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/beaudash'>
         <ErrorBoundary>
           <Routes>
             <Route path="/" element={<HomePage />} />
