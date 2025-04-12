@@ -7,7 +7,6 @@ import { FaMicrosoft } from "react-icons/fa"; // Font Awesome
 import { SiAdobecreativecloud } from "react-icons/si"; // Font Awesome
 import Accordion from "react-bootstrap/Accordion";
 import Badge from 'react-bootstrap/Badge';
-import Stack from 'react-bootstrap/Stack';
 import { PiHairDryerFill } from "react-icons/pi";
 import { GiLargePaintBrush } from "react-icons/gi";
 import { FaHandHoldingDroplet } from "react-icons/fa6";
@@ -27,7 +26,6 @@ export default function ResumePage() {
   return (
     <div className="profile" id="profile">
       {/** Start Main container */}
-
       <div className="w3-margin-top w3-padding-top-32">
         <div className="w3-text-black w3-margin-top">
           {/*} Start Main row*/}
