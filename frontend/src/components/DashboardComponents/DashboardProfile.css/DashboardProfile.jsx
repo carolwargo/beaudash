@@ -19,6 +19,8 @@ import { FaSwimmingPool } from "react-icons/fa";
 import { GiFootprint } from "react-icons/gi";
 import { MdOutlineBoy } from "react-icons/md";
 import { MdOutlineGirl } from "react-icons/md";
+import Nav from 'react-bootstrap/Nav';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
 
@@ -653,6 +655,63 @@ export default function ResumePage() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+  {/**End Menu Icons */}
+  
+
+       {/**Start Post Component */}
+       <div className="py-1">
+       <Nav variant="tabs" defaultActiveKey="/home" className="justify-content-center mt-3">
+      <Nav.Item>
+        <Nav.Link href="/home">Network</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Services</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-2">Classes</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-3">For Sale</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-4">Jobs</Nav.Link>
+      </Nav.Item>
+    </Nav>
+
+       <div
+                className="rounded-bottom border shadow"
+                style={{
+                  borderWidth: "2px",
+                  borderStyle: "solid",
+                  borderColor: "#ccc",
+                  backgroundColor: "#f8f9fa",
+                }}
+              >
+                
+                    <div className="container">
+                  
+                  <div className="row align-items-center justify-content-center p-3">
+                  <div className="card">
+                  <div className="card-body"> 
+                  <div className="col-sm-2 col-md-2 col-lg-2">
+                  <div className="container">
+                      <img src={GirlCamera} alt="" className="shadow rounded-circle" style={{width:'85%'}}/>
+                    </div>
+                    </div>
+                    <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-center">
+                    <div className="container">
+                      <Link to={"/"} className=" text-decoration-none">
+              <h1>What's Happening?</h1>
+                        <p className="card-title fw-bold w3-margin-left my-2">Start a Post</p>
+                      </Link>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
                 </div>
               </div>
   {/**End Menu Icons */}

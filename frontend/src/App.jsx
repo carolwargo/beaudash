@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage/HomePage'; // Import HomePage component
 import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary component
 import DashboardPage from './pages/Dashboard/DashboardPage';  
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import './App.css';
 
 function App() {
