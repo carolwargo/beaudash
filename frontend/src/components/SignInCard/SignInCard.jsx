@@ -104,23 +104,30 @@ export default function SignInCard() {
         noValidate
         sx={{ display: 'flex', flexDirection: 'column', width: '100%', gap: 2 }}
       >
-        <FormControl>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <TextField
-            error={emailError}
-            helperText={emailErrorMessage}
-            id="email"
-            type="email"
-            name="email"
-            placeholder="your@email.com"
-            autoComplete="email"
-            autoFocus
-            required
-            fullWidth
-            variant="outlined"
-            color={emailError ? 'error' : 'primary'}
-          />
-        </FormControl>
+<FormControl>
+  <FormLabel htmlFor="email">Email</FormLabel>
+  <TextField
+    error={emailError}
+    helperText={emailErrorMessage}
+    id="email"
+    type="email"
+    name="email"
+    placeholder="your@email.com"
+    autoComplete="email"
+    autoFocus
+    required
+    fullWidth
+    variant="outlined"
+    color={emailError ? 'error' : 'primary'}
+    sx={{
+      '& .MuiInputBase-input': {
+        paddingTop: '8px',
+        paddingBottom: '8px',
+      },
+    }}
+  />
+</FormControl>
+
         <FormControl>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <FormLabel htmlFor="password">Password</FormLabel>
@@ -147,6 +154,12 @@ export default function SignInCard() {
             fullWidth
             variant="outlined"
             color={passwordError ? 'error' : 'primary'}
+            sx={{
+              '& .MuiInputBase-input': {
+                paddingTop: '8px',
+                paddingBottom: '8px',
+              },
+            }}
           />
         </FormControl>
         <FormControlLabel
@@ -177,6 +190,18 @@ export default function SignInCard() {
           variant="outlined"
           onClick={() => alert('Sign in with Google')}
           startIcon={<GoogleIcon />}
+          sx={{
+            color: '#4267B2',
+            borderColor: '#4267B2',
+            borderRadius: 2,
+            textTransform: 'none',
+            fontWeight: 'bold',
+            '&:hover': {
+              backgroundColor: '#4267B2',
+              color: '#fff',
+              borderColor: '#4267B2',
+            },
+          }}
         >
           Sign in with Google
         </Button>
@@ -185,6 +210,18 @@ export default function SignInCard() {
           variant="outlined"
           onClick={() => alert('Sign in with Facebook')}
           startIcon={<FacebookIcon />}
+          sx={{
+            color: '#4267B2',
+            borderColor: '#4267B2',
+            borderRadius: 2,
+            textTransform: 'none',
+            fontWeight: 'bold',
+            '&:hover': {
+              backgroundColor: '#4267B2',
+              color: '#fff',
+              borderColor: '#4267B2',
+            },
+          }}
         >
           Sign in with Facebook
         </Button>
