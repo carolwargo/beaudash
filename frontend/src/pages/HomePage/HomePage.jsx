@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import SignInCard from '../../components/SignInCard/SignInCard';
 import Content from '../../components/SignInCard/Content';
 import AppTheme from '../../shared-theme/AppTheme'; // ✅ Re-add AppThemeimport FormCustomizations from '../../shared-theme/FormCustomization';
-import formCustomizations from '../../shared-theme/FormCustomization'; // ✅ Re-add FormCustomizations
+import formCustomizations from '../../shared-theme/formCustomization'; // ✅ Re-add FormCustomizations
 
 const xThemeComponents = {
   ...formCustomizations,
