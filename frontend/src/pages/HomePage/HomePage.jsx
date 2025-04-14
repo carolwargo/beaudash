@@ -3,13 +3,17 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
 import SignInCard from '../../components/SignInCard/SignInCard';
 import Content from '../../components/SignInCard/Content';
-// import AppTheme from '../../shared-theme/AppTheme'; // Remove this
+import AppTheme from '../../shared-theme/AppTheme'; // ✅ Re-add AppThemeimport FormCustomizations from '../../shared-theme/FormCustomization';
+import formCustomizations from '../../shared-theme/FormCustomization'; // ✅ Re-add FormCustomizations
+
+const xThemeComponents = {
+  ...formCustomizations,
+};
 
 export default function HomePage() {
   return (
-    <>
+    <AppTheme themeComponents={xThemeComponents}> {/* ✅ Wrap with AppTheme */}
       <CssBaseline enableColorScheme />
-      {/* Optional: Add ColorModeSelect later if you define it */}
       <Stack
         direction="column"
         component="main"
@@ -50,6 +54,6 @@ export default function HomePage() {
           <SignInCard />
         </Stack>
       </Stack>
-    </>
+    </AppTheme>
   );
 }

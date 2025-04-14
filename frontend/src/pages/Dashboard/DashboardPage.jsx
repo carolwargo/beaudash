@@ -6,7 +6,7 @@ import { FaGoogle } from "react-icons/fa";
 import { FaMicrosoft } from "react-icons/fa"; // Font Awesome
 import { SiAdobecreativecloud } from "react-icons/si"; // Font Awesome
 import "bootstrap/dist/css/bootstrap.min.css";
-import DashboardProfile from "../../components/DashboardComponents/DashboardProfile.css/DashboardProfile";
+import DashboardProfile from "../../components/DashboardComponents/DashboardProfile/DashboardProfile";
 
 export default function ResumePage() {
   return (
