@@ -3,11 +3,10 @@ import React from 'react';
 import HomePage from './pages/HomePage/HomePage'; // Import HomePage component
 import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary component
 import DashboardPage from './pages/Dashboard/DashboardPage';  
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import './override.css'; // Import custom CSS for overrides 
-
+import Test from './pages/Test/Test'; // Import Test component  
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './index.css'; // Import global CSS
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
+            <Route path="/test" element={<Test />} /> {/* Test route */}
           </Routes>
         </ErrorBoundary>
       </BrowserRouter>

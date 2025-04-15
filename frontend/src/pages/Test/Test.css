@@ -1,17 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@100;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap');
-
-
-/* LoginForm.css */
+/* TestInput.css */
 .custom-input.form-control {
     background-color: lightgray !important;
     border-color: gray !important;
     border-radius: 4px !important;
     color: black !important;
     box-shadow: none !important;
-    transition: all 0.2s ease-in-out;
 }
 
 .custom-input.form-control:hover {
@@ -23,5 +16,4 @@
     background-color: lightgray !important;
     border-color: #333 !important;
     box-shadow: 0 0 0 0.2rem rgba(128, 128, 128, 0.25) !important;
-    outline: none !important;
 }
