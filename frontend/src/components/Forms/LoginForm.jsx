@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 import styles from './Forms.module.css'; // Import custom CSS module
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+
 
 export default function LoginForm() {
   return (
@@ -15,7 +15,8 @@ export default function LoginForm() {
           <Form.Control 
           type="email" 
           placeholder="Enter your email" 
-          className={`${styles.customInput}`}
+          className={styles.customInput}
+          style={{ backgroundColor: 'LightGray' }} 
           />
         </Form.Group>
 
@@ -25,7 +26,7 @@ export default function LoginForm() {
           <Form.Control 
           type="password" 
           placeholder="Enter your password" 
-          className={`${styles.customInput}`}
+         className={styles.customInput}
           />
         </Form.Group>
 

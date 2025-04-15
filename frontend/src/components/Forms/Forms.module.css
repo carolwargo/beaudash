@@ -1,13 +1,7 @@
-/* More specific selector using attribute */
-input.customInput {
-  background-color: LightGray !important;
+:global(.form-control) {
+  background-color: lightgray !important;
   border-color: gray !important;
   border-radius: 4px !important;
   color: black !important;
 }
-input.customInput:focus {
-  background-color: LightGray !important;
-  border-color: gray !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
-  color: black !important;
-}
+
