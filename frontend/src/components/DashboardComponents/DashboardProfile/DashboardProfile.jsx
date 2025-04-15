@@ -20,7 +20,7 @@ import { GiFootprint } from "react-icons/gi";
 import { MdOutlineBoy } from "react-icons/md";
 import { MdOutlineGirl } from "react-icons/md";
 import Nav from 'react-bootstrap/Nav';
-
+import PostsForm from "../../PostForm/PostForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
 
@@ -28,13 +28,16 @@ export default function ResumePage() {
   return (
     <div className="profile" id="profile">
       {/** Start Main container */}
+
+
+      
       <div className="w3-margin-top w3-padding-top-32">
-        <div className="w3-text-black w3-margin-top">
           {/*} Start Main row*/}
           <div className="w3-row-padding justify-content-center w3-white align-items-center">
             {/*Start Left Column*/}
-            <div className="w3-quarter flex-column justify-content-center align-items-center  ">
-              {/*Start Left Column*/}
+            <div className="w3-quarter flex-column justify-content-center align-items-center"
+            style={{viewHeight:'100vh', overflowY:'hidden'}}> 
+         <div className="px-2">
               <div className="shadow border border-3 rounded ">
                 <div className="w3-content shadow">
                   <div className="w3-display-container">
@@ -54,12 +57,12 @@ export default function ResumePage() {
                       <div className="w3-container ">
                         <h2 className="fw-bolder text-secondary-emphasis">Jocelyn Doe</h2>
                         <p className="mb-0 small">
-                          <i className="fa fa-briefcase w3-margin-right w3-text-black"></i>
+                          <i className="fa fa-briefcase w3-margin-right "></i>
                          Cosmetologist
                         </p>
 
                         <p className="small">
-                          <i className="fa fa-home w3-margin-right w3-text-black"></i>
+                          <i className="fa fa-home w3-margin-right "></i>
                           Huntingtown, MD
                         </p>
                       </div>
@@ -341,7 +344,7 @@ export default function ResumePage() {
                   <div className="shadow-lg">
                     <div className="container py-2">
                       <div className="w3-container">
-                        <h6 className="w3-large my-3 w3-text-black">
+                        <h6 className="w3-large my-3 ">
                           <i className="fa fa-asterisk fa-fw"></i>
                           <b style={{ marginLeft: "3px" }}>Hair Proficiency</b>
                         </h6>
@@ -381,8 +384,8 @@ export default function ResumePage() {
 
                       {/**Start Programming Languages */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme w3-text-black my-4">
-                          <i className="fa fa-globe fa-fw w3-text-black"></i>
+                        <h6 className="w3-large w3-text-theme  my-4">
+                          <i className="fa fa-globe fa-fw "></i>
                           <b style={{ marginLeft: "3px" }}>
                           Gender
                           </b>
@@ -413,8 +416,8 @@ export default function ResumePage() {
 
                       {/**Start Frameworks */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme w3-text-black my-4">
-                          <i className="fa fa-globe fa-fw  w3-text-black"></i>
+                        <h6 className="w3-large w3-text-theme  my-4">
+                          <i className="fa fa-globe fa-fw  "></i>
                           <b style={{ marginLeft: "3px" }}>Frameworks</b>
                         </h6>
 
@@ -465,24 +468,24 @@ export default function ResumePage() {
 
                       {/**Start Proficiencies */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme w3-text-black my-4">
-                          <i className="fas fa-desktop  w3-text-black"></i>
+                        <h6 className="w3-large w3-text-theme  my-4">
+                          <i className="fas fa-desktop  "></i>
                           <b style={{ marginLeft: "3px" }}>
                             {" "}
                             Software Proficiencies
                           </b>
                         </h6>
 
-                        <h6 className="w3-text-black w3-margin-left small">
-                          <FaGoogle className="fa-fw w3-margin-left w3-text-black" />{" "}
+                        <h6 className=" w3-margin-left small">
+                          <FaGoogle className="fa-fw w3-margin-left " />{" "}
                           Google Workspace
                         </h6>
-                        <h6 className="w3-text-black w3-margin-left small">
-                          <FaMicrosoft className="fa-fw w3-margin-left w3-text-black" />{" "}
+                        <h6 className=" w3-margin-left small">
+                          <FaMicrosoft className="fa-fw w3-margin-left " />{" "}
                           Microsoft Suite
                         </h6>
-                        <h6 className="w3-text-black w3-margin-left small">
-                          <SiAdobecreativecloud className="fa-fw w3-margin-left w3-text-black" />{" "}
+                        <h6 className=" w3-margin-left small">
+                          <SiAdobecreativecloud className="fa-fw w3-margin-left " />{" "}
                           Adobe Creative Cloud
                         </h6>
                         <div className="w3-grey w3-round-xlarge w3-small mt-4">
@@ -493,7 +496,7 @@ export default function ResumePage() {
                             90%
                           </div>
                         </div>
-                        <p className="w3-text-black small">
+                        <p className=" small">
                           Collaborative Software
                         </p>
 
@@ -505,7 +508,7 @@ export default function ResumePage() {
                             90%
                           </div>
                         </div>
-                        <p className="w3-text-black small">Design Software</p>
+                        <p className=" small">Design Software</p>
                       </div>
                       {/**end Proficiencies */}
                     </div>
@@ -553,12 +556,13 @@ export default function ResumePage() {
                 </div>
               </div>
             </div>
-
+            </div>
             {/*End Left Column*/}
 
             {/*Start Middle Column Half*/}
-            <div className="w3-half flex-column justify-content-center align-items-center px-2">
-             
+            <div className="w3-half flex-column justify-content-center align-items-center"
+              style={{viewHeight:'100vh', overflowY:'hidden'}}> 
+            <div className="px-2">
              {/**Start Menu Icons */}
               <div
                 className="rounded border shadow"
@@ -662,37 +666,31 @@ export default function ResumePage() {
 
        {/**Start Post Component */}
        <div className="py-1">
-       <Nav variant="tabs" defaultActiveKey="/home" className="justify-content-center mt-3">
+       <div className="mt-2">
+       <div className=" w3-padding-small">
+       <Nav variant="tabs" defaultActiveKey="/home" className="justify-content-center mt-3 border-bottom border-2">
       <Nav.Item>
-        <Nav.Link href="/home">Network</Nav.Link>
+        <Nav.Link href="/home" className=" border-2">Network</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Services</Nav.Link>
+        <Nav.Link eventKey="link-1" className=" border-2">Services</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-2">Classes</Nav.Link>
+        <Nav.Link eventKey="link-2" className=" border-2">Classes</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-3">For Sale</Nav.Link>
+        <Nav.Link eventKey="link-3" className=" border-2">For Sale</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-4">Jobs</Nav.Link>
+        <Nav.Link eventKey="link-4" className=" border-2">Jobs</Nav.Link>
       </Nav.Item>
     </Nav>
-
-       <div
-                className="rounded-bottom border shadow"
-                style={{
-                  borderWidth: "2px",
-                  borderStyle: "solid",
-                  borderColor: "#ccc",
-                  backgroundColor: "#f8f9fa",
-                }}
-              >
-                
-                    <div className="container">
-                  
-                  <div className="row align-items-center justify-content-center p-3">
+    </div>
+    </div>
+    <div className="mt-2">
+                  <div className="shadow-lg border border-secondary-subtle border-2 rounded">
+                    <div className=" w3-padding-large ">
+                  <div className="row align-items-center justify-content-center p-2">
                   <div className="card">
                   <div className="card-body"> 
                   <div className="col-sm-2 col-md-2 col-lg-2">
@@ -710,6 +708,7 @@ export default function ResumePage() {
                     </div>
                     </div>
                   </div>
+                  </  div>
                 </div>
                 </div>
                 </div>
@@ -717,112 +716,28 @@ export default function ResumePage() {
   {/**End Menu Icons */}
 
     {/**Start Newsfeed */}
-              <div className="w3-content">
-                <div className=" py-1">
-                  <div
-                    className="rounded border"
-                    style={{
-                      borderWidth: "2px",
-                      borderStyle: "solid",
-                      borderColor: "#ccc",
-                      backgroundColor: "#f8f9fa",
-                      boxShadow:
-                        "inset 2px 2px 5px rgba(255,255,255,0.8), inset -2px -2px 5px rgba(0,0,0,0.1), 2px 2px 8px rgba(0,0,0,0.2)",
-                    }}
-                  >
-                    <div className="p-4">
-                      <h5>TITLE (EVENT)</h5>
-                      <img
-                        src={GirlCamera}
-                        alt="girl camera"
-                        className="w-100"
-                      />
-                      <h6 className="w3-text-black small">
-                        <i className="fa fa-calendar fa-fw small mt-3"></i> June
-                        2016 -{" "}
-                        <span className="w3-tag w3-black w3-round small py-1">
-                          timestamp
-                        </span>
-                      </h6>
-                      <p className="w3-text-black my-2 small">
-                        <b>Description</b>
-                      </p>
-                      <p className="small">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Provident pariatur minima harum recusandae perspiciatis
-                        obcaecati, ipsa laborum vero quas quis. Autem cumque
-                        nulla quasi sequi cum ad! Dolores, voluptas quasi.
-                      </p>
-                      <div className=" text-end my-3">
-                        <a
-                          className="button text-decoration-none"
-                          id="download"
-                          download
-                          href={ResumeDownload}
-                        >
-                          <button className=" btn w3-black w-100 w3-hover-opacity">
-                            Message
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className=" w3-padding-16">
-                  <div className="shadow-lg border border-secondary-subtle border-2 rounded">
-                    <div className=" w3-padding-large w3-padding-16 shadow-lg">
-                      <h5>TITLE (EVENT)</h5>
-                      <img
-                        src={GirlCamera}
-                        alt="girl camera"
-                        className="w-100"
-                      />
-                      <h6 className="w3-text-black small">
-                        <i className="fa fa-calendar fa-fw small mt-3"></i> June
-                        2016 -{" "}
-                        <span className="w3-tag w3-black w3-round small py-1">
-                          timestamp
-                        </span>
-                      </h6>
-                      <p className="w3-text-black my-2 small">
-                        <b>Description</b>
-                      </p>
-                      <p className="small">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Provident pariatur minima harum recusandae perspiciatis
-                        obcaecati, ipsa laborum vero quas quis. Autem cumque
-                        nulla quasi sequi cum ad! Dolores, voluptas quasi.
-                      </p>
-                      <div className=" text-end my-3">
-                        <a
-                          className="button text-decoration-none"
-                          id="download"
-                          download
-                          href={ResumeDownload}
-                        >
-                          <button className=" btn w3-black w-100 w3-hover-opacity">
-                            Message
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="w3-post-content ">
+     <PostsForm/>
+     <PostsForm/>
               </div>
+              
                {/**End Newsfeed */}
+            </div>
             </div>
             {/*End Middle Column Half*/}
 
   {/*Start Right Column Quarter*/}
-            <div className="w3-quarter  flex-column justify-content-center align-items-center  ">
+            <div className="w3-quarter flex-column justify-content-center align-items-center"
+              style={{viewHeight:'100vh', overflowY:'hidden'}}> 
+            <div className="px-2">
               <div className="border rounded ">
                 <div className="w3-content">
-                  <div className="shadow-lg">
+                  <div className="shadow">
                     <div className="container py-2">
                       {/**start Upgrade */}
 
                       <div className="w3-container">
-                        <h4 className="fw-bolder w3-text-black">
+                        <h4 className="fw-bolder ">
                           Upgrade to Premium +
                         </h4>
 
@@ -847,12 +762,12 @@ export default function ResumePage() {
               </div>
 
               {/**start explore business services */}
-              <div className="mt-1">
+              <div className="mt-2">
                 <div className="border border-2 rounded">
-                  <div className="shadow-lg">
+                  <div className="shadow">
                     <div className="container">
                       <div className="w3-container py-2">
-                        <h4 className="fw-bolder w3-text-black mb-0 d-flex justify-content-between align-items-center">
+                        <h4 className="fw-bolder  mb-0 d-flex justify-content-between align-items-center">
                           <span>Business Services</span>
                           <span
                             className="w3-tag py-1 px-3 bg-danger-subtle text-danger rounded-4"
@@ -980,15 +895,13 @@ Cosmetic Chemist & Innovative Analyst
                 </div>
               </div>
               {/**End explore-business services */}
-
-
               {/**start explore-hot-topics */}
-              <div className="mt-1">
+              <div className="mt-2">
                 <div className="border border-2 rounded">
-                  <div className="shadow-lg">
+                  <div className="shadow">
                     <div className="container">
                       <div className="w3-container py-2">
-                        <h4 className="fw-bolder w3-text-black mb-4 d-flex justify-content-between align-items-center">
+                        <h4 className="fw-bolder  mb-4 d-flex justify-content-between align-items-center">
                           <span>Explore (Hot Topics)</span>
                           <span
                             className="w3-tag py-1 px-3 bg-danger-subtle text-danger rounded-4"
@@ -1102,14 +1015,13 @@ Cosmetic Chemist & Innovative Analyst
                 </div>
               </div>
               {/**end explore-hot-topics */}
-
               {/**start explore-classes */}
-              <div className="mt-1">
+              <div className="mt-2">
                 <div className="border border-2 rounded">
-                  <div className="shadow-lg">
+                  <div className="shadow">
                     <div className="container">
                       <div className="w3-container py-2">
-                        <h4 className="fw-bolder w3-text-black mb-4 d-flex justify-content-between align-items-center">
+                        <h4 className="fw-bolder  mb-4 d-flex justify-content-between align-items-center">
                           <span>Explore (Hot Topics)</span>
                           <span
                             className="w3-tag py-1 px-3 bg-danger-subtle text-danger rounded-4"
@@ -1223,14 +1135,13 @@ Cosmetic Chemist & Innovative Analyst
                 </div>
               </div>
               {/**End explore-classes */}
-
               {/**start explore-jobs */}
-              <div className="mt-1">
+              <div className="mt-2">
                 <div className="border border-2 rounded">
-                  <div className="shadow-lg">
+                  <div className="shadow">
                     <div className="container">
                       <div className="w3-container py-2">
-                        <h4 className="fw-bolder w3-text-black mb-4 d-flex justify-content-between align-items-center">
+                        <h4 className="fw-bolder  mb-4 d-flex justify-content-between align-items-center">
                           <span>Jobs</span>
                           <span
                             className="w3-tag py-1 px-3 bg-danger-subtle text-danger rounded-4"
@@ -1346,13 +1257,14 @@ Cosmetic Chemist & Innovative Analyst
               </div>
               {/**End explore-jobs */}
             </div>
+            </div>
           {/*End Right Column Quarter*/}
            
             {/*} End Grid*/}
           </div>
           {/*}End Main row*/}
         </div>
-      </div>
+ 
 
       <div className="w3-container w3-content text-center w3-padding-48 w3-margin-bottom w3-padding-small">
         <footer className="text-muted py-5 position-fixed bottom-0 start-0 w-100">
