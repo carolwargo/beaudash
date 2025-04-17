@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GirlCamera from "../../../assets/images/GirlCamera.png";
-import ResumeDownload from "../../../assets/ResumeDownload.pdf";
+import GirlCamera from "../../assets/images/GirlCamera.png";
+import ResumeDownload from "../../assets/ResumeDownload.pdf";
 import { FaGoogle } from "react-icons/fa";
 import { FaMicrosoft } from "react-icons/fa"; // Font Awesome
 import { SiAdobecreativecloud } from "react-icons/si"; // Font Awesome
-import Accordion from "react-bootstrap/Accordion";
 import Badge from 'react-bootstrap/Badge';
 import { PiHairDryerFill } from "react-icons/pi";
 import { GiLargePaintBrush } from "react-icons/gi";
@@ -22,18 +21,18 @@ import { MdOutlineGirl } from "react-icons/md";
 import { GiCrystalEarrings } from "react-icons/gi";
 import { PiNeedleDuotone } from "react-icons/pi";
 import Nav from 'react-bootstrap/Nav';
-import PostsForm from "../../Posts/UserPostForm/UserPostForm";
+import PostsForm from "../Posts/UserPostForm/UserPostForm";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./DashboardProfile.css"; // Import CSS for styling
+import "./UserProfile.css"; // Import CSS for styling
 //import CustomUserSocialIcons from "../CustomUserSocialIcons/CustomUserSocialIcons"; // Import CustomUserSocialIcons component
-import ExploreTopics from "../ExplorePosts/ExploreTopics";
-import ExploreBusiness from "../ExplorePosts/ExploreBusiness";
-import ExploreJobs from "../ExplorePosts/ExploreJobs";
-import ExploreClasses from "../ExplorePosts/ExploreClasses";
+import ExploreTopics from "../DashboardComponents/ExplorePosts/ExploreTopics";
+import ExploreBusiness from "../DashboardComponents/ExplorePosts/ExploreBusiness";
+import ExploreJobs from "../DashboardComponents/ExplorePosts/ExploreJobs";
+import ExploreClasses from "../DashboardComponents/ExplorePosts/ExploreClasses";
 
-export default function DashboardProfile() {
+export default function UserProfile() {
   return (
-    <div className="dashboard-profile" id="dashboard-profile">
+    <div className="user-profile" id="user-profile">
       <div className="container-fluid">
       {/** Start Main container */}
 
@@ -613,23 +612,21 @@ export default function DashboardProfile() {
                       <div className=" w3-padding-large ">
                         <div className="post-wrapper">
                         
-         
-                          <div className="row align-items-center justify-content-center">
+                        <Link to={"/"} className=" text-decoration-none">
+                          <div className="row align-items-center justify-content-start">
                        
                         <div className="col-sm-2 col-md-2 col-lg-2">
                
-               <img src={GirlCamera} alt="" className="shadow rounded-circle w3-hide-medium w3-hide-small" style={{width:'85%'}}/>
+               <img src={GirlCamera} alt="" className="shadow rounded-circle w3-hide-medium w3-hide-small mb-0 mt-1" style={{width:'65%'}}/>
              </div>
-        
-             <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-center">
-       
-               <Link to={"/"} className=" text-decoration-none">
-       <h3>What's Happening?</h3>
-                 <p className="card-title my-2 opacity-50">Start a Post</p>
-               </Link>
-             
+             <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-start">
+  <span className="text-primary fw-bold">What's Happening?</span><br />
+  <span className="card-title opacity-75 small typing-indicator"></span>
+  <span className="card-title opacity-25 small fw-bold">Start a Post</span>
+</div>
+
                   </div>
-                  </div>
+                  </Link>
                   </div>
                   </div>
                   </div>
@@ -649,7 +646,7 @@ export default function DashboardProfile() {
 
   {/*Start Right Column Quarter*/}
             <div className="w3-quarter flex-column justify-content-center align-items-center"> 
-            <div className="container p-2 my-2 ">
+            <div className="container">
             <div className="border border-2 rounded"> 
     
                       {/**start Upgrade */}

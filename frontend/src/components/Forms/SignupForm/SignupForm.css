@@ -1,0 +1,122 @@
+/* SignupForm.css */
+
+/* === Container === */
+.form-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    max-width: 700px; /* Optional: Set a max width for the form */
+  }
+  
+  /* === Form Groups === */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  
+  .placeholder {
+    color: #999 !important; /* Placeholder color */
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  /* Unified input styles for all form inputs */
+  .form-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ccc !important;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #212121;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Focus state for all inputs */
+  .form-input:focus {
+    border-color: #1d1d1d !important;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25) !important;
+  }
+  
+
+  
+  /* === Layout Helpers === */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-col {
+    flex: 1;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+/* === Checkboxes === */
+.form-checkbox {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+    font-weight: 400;
+  }
+  
+  /* Optional: style the input directly if needed */
+  .form-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: #212121 solid 2px;
+    border-radius: 4px;
+  }
+  
+  
+  /* === Links === */
+  .form-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* === Buttons === */
+  .form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0f0f0f;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* === Footer === */
+  .form-footer {
+    text-align: center;
+    margin-top: .75rem;
+  }
+  

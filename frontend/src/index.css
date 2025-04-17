@@ -4,25 +4,3 @@
      }
    
 
-
-/* LoginForm.css */
-.custom-input.form-control {
-  background-color: lightgray !important;
-  border-color: gray !important;
-  border-radius: 4px !important;
-  color: black !important;
-  box-shadow: none !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.custom-input.form-control:hover {
-  background-color: #d3d3d3 !important;
-  border-color: #555 !important;
-}
-
-.custom-input.form-control:focus {
-  background-color: lightgray !important;
-  border-color: #333 !important;
-  box-shadow: 0 0 0 0.2rem rgba(128, 128, 128, 0.25) !important;
-  outline: none !important;
-}

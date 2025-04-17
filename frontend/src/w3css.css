@@ -123,7 +123,7 @@ html {
   
   
   button,
-  input,
+
   select,
   textarea,
   optgroup {
@@ -239,13 +239,7 @@ html {
   .w3-ripple {
     transition: opacity 0s;
   }
-  .w3-input {
-    padding: 8px;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-  }
+
   .w3-select {
     padding: 9px 0;
     width: 100%;
@@ -921,12 +915,7 @@ html {
       transform: scale(1);
     }
   }
-  .w3-animate-input {
-    transition: width 0.4s ease-in-out;
-  }
-  .w3-animate-input:focus {
-    width: 100% !important;
-  }
+
   .w3-opacity,
   .w3-hover-opacity:hover {
     opacity: 0.6;

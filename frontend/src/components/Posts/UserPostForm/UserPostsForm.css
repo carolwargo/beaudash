@@ -15,17 +15,20 @@
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
+  text-align: center; /* optional, if you want to center everything */
+  margin-bottom: 5px;
+}
+.post-img-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.post-title {
-  margin: 0;
+.post-text {
+  display: flex;
+  flex-direction: column;
 }
 
-.post-date {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: gray;
-}
 
 .likes-shares {
   display: flex;

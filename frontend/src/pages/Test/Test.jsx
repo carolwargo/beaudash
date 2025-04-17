@@ -1,9 +1,16 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import './Test.css';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar/DashboardSidebar';
 
 export default function TestInput() {
   return (
-    <Form.Control type="text" className="custom-input" placeholder="Test" />
+
+
+    <div>
+      <DashboardSidebar />
+       {/**<Form.Control type="text" className="custom-input" placeholder="Test" />*/}
+    </div>
+   
   );
 }

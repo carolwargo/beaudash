@@ -22,7 +22,7 @@ import { MdOutlineGirl } from "react-icons/md";
 import { GiCrystalEarrings } from "react-icons/gi";
 import { PiNeedleDuotone } from "react-icons/pi";
 import Nav from 'react-bootstrap/Nav';
-import PostsForm from "../../Posts/UserPostForm/UserPostForm";
+import PostsForm from "../../PostForm/PostForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
 //import CustomUserSocialIcons from "../CustomUserSocialIcons/CustomUserSocialIcons"; // Import CustomUserSocialIcons component
@@ -31,9 +31,9 @@ import ExploreBusiness from "../ExplorePosts/ExploreBusiness";
 import ExploreJobs from "../ExplorePosts/ExploreJobs";
 import ExploreClasses from "../ExplorePosts/ExploreClasses";
 
-export default function DashboardProfile() {
+export default function DashboardNewsfeed() {
   return (
-    <div className="dashboard-profile" id="dashboard-profile">
+    <div className="dashboard-newsfeed" id="dashboard-newsfeed">
       <div className="container-fluid">
       {/** Start Main container */}
 

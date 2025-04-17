@@ -1,27 +1,28 @@
 import React from "react";
-import GirlCamera from "../../assets/images/GirlCamera.png";
-import "./PostsForm.css";
+import GirlCamera from "../../../assets/images/GirlCamera.png";
+import "./UserPostsForm.css";
 import { Link } from "react-router-dom";
 
-const PostForm = () => {
+const UserPostForm = () => {
   return (
     <div className="mt-2">
       <div className="shadow-lg border border-secondary-subtle border-2 rounded">
         <div className=" w3-padding-large ">
           <div className="post-wrapper">
-            <div className="post-img-title">
-              <img
-                src={GirlCamera}
-                alt="event"
-                className="post-img rounded-circle"
-              />
-              <h5 className="post-title">TITLE (EVENT)</h5>
-            </div>
-            <p className="post-date">April 15, 2025</p>
+          <div className="post-img-title">
+  <img
+    src={GirlCamera}
+    alt="event"
+    className="post-img rounded-circle shadow"
+  />
+  
+  <div className="post-text mt-3">
+    <h5 className="post-title">TITLE (EVENT)</h5>
+    <p className="post-date">April 15, 2025</p>
+  </div>
+</div>
 
-            <p className="small">
-              <b>Description</b>
-            </p>
+
             <p className="small">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               pariatur minima harum recusandae perspiciatis obcaecati, ipsa
@@ -58,4 +59,4 @@ const PostForm = () => {
   );
 };
 
-export default PostForm;
+export default UserPostForm;
