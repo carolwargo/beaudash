@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
-import HomePage from './pages/HomePage/HomePage'; // Import HomePage component
+import Home from './pages/Home'; // Import Home component
 import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary component
 import DashboardPage from './pages/Dashboard/DashboardPage';  
-import UserProfilePage from './pages/ProfilePage/ProfilePage'; // Import UserProfilePage component  
+import UserProfile from './pages/UserProfile/UserProfile'; // Import UserProfilePage component  
 import Test from './pages/Test/Test'; // Import Test component  
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -15,9 +15,9 @@ function App() {
       <BrowserRouter basename='/beaudash'>
         <ErrorBoundary>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/profile" element={<UserProfilePage />} /> {/* User profile route */}
+            <Route path="/user" element={<UserProfile/>} /> {/* User profile route */}
             <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
             <Route path="/test" element={<Test />} /> {/* Test route */}
           </Routes>
