@@ -369,44 +369,57 @@ export default function DashboardProfile() {
                   {/**end  certs */}
 
                   {/**Start hAIR Skills*/}
+                  <div className="w3-container">
                     <div className="container py-2">
+                  
                         <h6 className="w3-large my-3 ">
                           <i className="fa fa-asterisk fa-fw"></i>
                           <b style={{ marginLeft: "3px" }}>Hair Proficiency</b>
                         </h6>
-
-                        <div className="w3-grey w3-round-xlarge w3-small mt-4">
+                        <h6 className="w3-large w3-text-theme  my-4">
+                          <i className="fa fa-globe fa-fw "></i>
+                          <b style={{ marginLeft: "3px" }}>
+                       Strengths
+                          </b>
+                        </h6>
+                        <div className="w3-grey w3-round-xlarge w3-small">
                           <div
-                            className="w3-container w3-center w3-round-xlarge w3-black"
+                            className="w3-container w3-center w3-round-xlarge w3-black small"
                             style={{ width: "90%" }}
                           >
-                            99%
+                            90%
                           </div>
                         </div>
-                        <p className="small">Styling</p>
+                        <p className="small"><span className="mt-3">Cut</span></p>
+
+
 
                         <div className="w3-grey w3-round-xlarge w3-small">
                           <div
-                            className="w3-container w3-center w3-round-xlarge w3-black"
-                            style={{ width: "75%" }}
+                            className="w3-container w3-center w3-round-xlarge w3-black small"
+                            style={{ width: "95%" }}
                           >
                             95%
                           </div>
                         </div>
-                        <p className="small">Cutting</p>
+                        <p className="small"><span className="mt-3">Color</span></p>
+
+
+
 
                         <div className="w3-grey w3-round-xlarge w3-small">
                           <div
-                            className="w3-container w3-center w3-round-xlarge w3-black"
-                            style={{ width: "85%" }}
+                            className="w3-container w3-center w3-round-xlarge w3-black small"
+                            style={{ width: "50%" }}
                           >
-                            99%
+                            90%
                           </div>
                         </div>
-                        <p className="small">Color <i className=" fas fa-trophy w3-text-pink"></i></p>
+                        <p className="small"><span className="mt-3">Style</span></p>
 
-                   
-                      {/**End Tech Skills */}
+               {/**End Programming Languages */}
+                      </div>
+
 
                       {/**Start Programming Languages */}
                       <div className="w3-container border-top border-black">
@@ -613,23 +626,21 @@ export default function DashboardProfile() {
                       <div className=" w3-padding-large ">
                         <div className="post-wrapper">
                         
-         
-                          <div className="row align-items-center justify-content-center">
+                        <Link to={"/"} className=" text-decoration-none">
+                          <div className="row align-items-center justify-content-start">
                        
                         <div className="col-sm-2 col-md-2 col-lg-2">
                
-               <img src={GirlCamera} alt="" className="shadow rounded-circle w3-hide-medium w3-hide-small" style={{width:'85%'}}/>
+               <img src={GirlCamera} alt="" className="shadow rounded-circle w3-hide-medium w3-hide-small mb-0 mt-1" style={{width:'65%'}}/>
              </div>
-        
-             <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-center">
-       
-               <Link to={"/"} className=" text-decoration-none">
-       <h3>What's Happening?</h3>
-                 <p className="card-title my-2 opacity-50">Start a Post</p>
-               </Link>
-             
+             <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-start">
+  <span className="text-primary fw-bold">What's Happening?</span><br />
+  <span className="card-title opacity-75 small typing-indicator"></span>
+  <span className="card-title opacity-25 small fw-bold">Start a Post</span>
+</div>
+
                   </div>
-                  </div>
+                  </Link>
                   </div>
                   </div>
                   </div>
@@ -649,7 +660,7 @@ export default function DashboardProfile() {
 
   {/*Start Right Column Quarter*/}
             <div className="w3-quarter flex-column justify-content-center align-items-center"> 
-            <div className="container p-2 my-2 ">
+            <div className="container ">
             <div className="border border-2 rounded"> 
     
                       {/**start Upgrade */}
