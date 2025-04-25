@@ -1,13 +1,13 @@
 import React from "react";
 import GirlCamera from "../../../assets/images/GirlCamera.png";
-import "./UserPostsForm.css";
+import "./PostsForm.css";
 import { Link } from "react-router-dom";
 
 const UserPostForm = () => {
   return (
     <div className="mt-2">
-      <div className="shadow-lg border border-secondary-subtle border-2 rounded">
-        <div className=" w3-padding-large ">
+      <div className="border border-secondary-subtle border-2 rounded">
+        <div className="my-padding-large ">
           <div className="post-wrapper">
           <div className="post-img-title">
   <img
@@ -41,14 +41,14 @@ const UserPostForm = () => {
             </span>
           </p>
 
-          <div className=" text-end my-3">
+          <div className="text-end my-3">
             <Link
               to={"/"}
               className="button text-decoration-none"
               id="download"
               download
             >
-              <button className=" btn w3-black w-100 w3-hover-opacity">
+              <button className="btn my-black w-100 my-hover-opacity">
                 Message
               </button>
             </Link>
