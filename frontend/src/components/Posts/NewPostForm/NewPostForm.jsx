@@ -1,13 +1,12 @@
 import React from "react";
-import GirlCamera from "../../assets/images/GirlCamera.png";
-import "./NewPostForm.css";
+import GirlCamera from "../../../assets/images/GirlCamera.png";
 import { Link } from "react-router-dom";
 
 const NewPostForm = () => {
   return (
     <div className="mt-2">
       <div className="shadow-lg border border-secondary-subtle border-2 rounded">
-        <div className=" w3-padding-large ">
+        <div className="my-padding-large">
           <div className="post-wrapper">
           <div className="post-img-title">
   <img
@@ -48,7 +47,7 @@ const NewPostForm = () => {
               id="download"
               download
             >
-              <button className=" btn w3-black w-100 w3-hover-opacity">
+              <button className="btn my-black w-100 my-hover-opacity">
                 Message
               </button>
             </Link>

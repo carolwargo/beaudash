@@ -21,15 +21,11 @@ import { MdOutlineBoy } from "react-icons/md";
 import { MdOutlineGirl } from "react-icons/md";
 import { GiCrystalEarrings } from "react-icons/gi";
 import { PiNeedleDuotone } from "react-icons/pi";
-import Nav from 'react-bootstrap/Nav';
-import PostsForm from "../../Posts/PostForm/PostForm";
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
-//import CustomUserSocialIcons from "../CustomUserSocialIcons/CustomUserSocialIcons"; // Import CustomUserSocialIcons component
-import ExploreTopics from "../ExplorePosts/ExploreTopics";
-import ExploreBusiness from "../ExplorePosts/ExploreBusiness";
-import ExploreJobs from "../ExplorePosts/ExploreJobs";
-import ExploreClasses from "../ExplorePosts/ExploreClasses";
+
 
 export default function DashboardProfile() {
   return (
@@ -37,10 +33,6 @@ export default function DashboardProfile() {
       <div className="container-fluid">
       {/** Start Main container */}
 
-          {/*} Start Main row*/}
-          <div className="row-padding justify-content-center w3-white align-items-center">
-            {/*Start Left Column*/}
-            <div className="w3-quarter flex-column justify-content-center align-items-center"> 
        
               <div className="border border-3 rounded ">
               <div className="w3-display-container" style={{ position: "relative" }}>
@@ -80,7 +72,7 @@ export default function DashboardProfile() {
   </div>
 </div>
                       <div className="container">  
-                     <div className="container my-2 ">
+                     <div className="container w3-2 ">
                  
                         <p className="mb-1 small">
                           <i className="fa fa-briefcase w3-margin-right "></i>
@@ -102,7 +94,7 @@ export default function DashboardProfile() {
                         </a>
                  </div>
                  <div>
-                 <div className="container my-3 ">
+                 <div className="container w3-3 ">
                       <Badge
   className="bg-danger-subtle border border-danger border-2"
   style={{
@@ -326,7 +318,7 @@ export default function DashboardProfile() {
                 </div>
               
                       {/**start bio */}
-                      <div className="container my-3">
+                      <div className="container w3-3">
                         <p className="small">
                      <i className="small">
                          Hello, Lorem ipsum dolor sit amet consectetur
@@ -348,7 +340,7 @@ export default function DashboardProfile() {
                   <div className="w3-black">
                     <div className="container py-2">
                       <div className="w3-container">
-                        <h4 className="w3-large w3-text-theme my-3 text-uppercase">
+                        <h4 className="w3-large w3-3 text-uppercase">
                           <i className="fa fa-certificate w3-xlarge "></i>{" "}
                           Licensing
                         </h4>
@@ -372,11 +364,11 @@ export default function DashboardProfile() {
                   <div className="w3-container">
                     <div className="container py-2">
                   
-                        <h6 className="w3-large my-3 ">
+                        <h6 className="w3-large w3-3 ">
                           <i className="fa fa-asterisk fa-fw"></i>
                           <b style={{ marginLeft: "3px" }}>Hair Proficiency</b>
                         </h6>
-                        <h6 className="w3-large w3-text-theme  my-4">
+                        <h6 className="w3-large  w3-4">
                           <i className="fa fa-globe fa-fw "></i>
                           <b style={{ marginLeft: "3px" }}>
                        Strengths
@@ -416,14 +408,12 @@ export default function DashboardProfile() {
                           </div>
                         </div>
                         <p className="small"><span className="mt-3">Style</span></p>
-
-               {/**End Programming Languages */}
                       </div>
 
 
                       {/**Start Programming Languages */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme  my-4">
+                        <h6 className="w3-large  w3-4">
                           <i className="fa fa-globe fa-fw "></i>
                           <b style={{ marginLeft: "3px" }}>
                           Gender
@@ -455,7 +445,7 @@ export default function DashboardProfile() {
 
                       {/**Start Frameworks */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme  my-4">
+                        <h6 className="w3-large  w3-4">
                           <i className="fa fa-globe fa-fw  "></i>
                           <b style={{ marginLeft: "3px" }}>Frameworks</b>
                         </h6>
@@ -507,7 +497,7 @@ export default function DashboardProfile() {
 
                       {/**Start Proficiencies */}
                       <div className="w3-container border-top border-black">
-                        <h6 className="w3-large w3-text-theme  my-4">
+                        <h6 className="w3-large  w3-4">
                           <i className="fas fa-desktop  "></i>
                           <b style={{ marginLeft: "3px" }}>
                             {" "}
@@ -558,7 +548,7 @@ export default function DashboardProfile() {
                   style={{ backgroundColor: "#FF385C" }}
                 >
                   <div className=" w3-container">
-                    <h6 className="w3-large w3-text-theme w3-text-white text-uppercase mb-3">
+                    <h6 className="w3-large w3-text-white text-uppercase mb-3">
                       <i className="fas fa-desktop"></i>
                       <b style={{ marginLeft: "3px" }}> Downloads</b>
                     </h6>
@@ -567,7 +557,7 @@ export default function DashboardProfile() {
                       For a physical copy, click the "Download" below to
                       download a PDF of of the selected document.
                     </p>
-                    <div className=" text-end my-3">
+                    <div className=" text-end w3-3">
                       <a
                         className="button text-decoration-none"
                         id="download"
@@ -579,7 +569,7 @@ export default function DashboardProfile() {
                         </button>
                       </a>
                     </div>
-                    <div className=" text-end my-3">
+                    <div className=" text-end w3-3">
                       <a
                         className="button text-decoration-none"
                         id="download"
@@ -595,159 +585,10 @@ export default function DashboardProfile() {
                 </div>
               </div>
             </div>
-         
-            {/*End Left Column*/}
-
-            {/*Start Middle Column Half*/}
-            <div className="w3-half flex-column justify-content-center align-items-center"> 
-       {/**Start Post Component */}
-       <div className="py-2 w-100">
-       <div className="mt-2">
-       <Nav variant="tabs" defaultActiveKey="/home" className="justify-content-center mt-3 border-bottom border-2">
-      <Nav.Item>
-        <Nav.Link href="/home" className=" border-2">Network</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1" className=" border-2">Services</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2" className=" border-2">Classes</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-3" className=" border-2">For Sale</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-4" className=" border-2">Jobs</Nav.Link>
-      </Nav.Item>
-    </Nav>
-    </div>
-                  <div className="mt-2">
-                    <div className="bg-white border border-secondary-subtle border-2 rounded">
-                      <div className=" w3-padding-large ">
-                        <div className="post-wrapper">
-                        
-                        <Link to={"/"} className=" text-decoration-none">
-                          <div className="row align-items-center justify-content-start">
-                       
-                        <div className="col-sm-2 col-md-2 col-lg-2">
-               
-               <img src={GirlCamera} alt="" className="shadow rounded-circle w3-hide-medium w3-hide-small mb-0 mt-1" style={{width:'65%'}}/>
-             </div>
-             <div className="col-sm-10 col-md-10 col-lg-10 align-items-center justify-content-start">
-  <span className="text-primary fw-bold">What's Happening?</span><br />
-  <span className="card-title opacity-75 small typing-indicator"></span>
-  <span className="card-title opacity-25 small fw-bold">Start a Post</span>
-</div>
-
-                  </div>
-                  </Link>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-  {/**End Menu Icons */}
-
-    {/**Start Newsfeed */}
-              <div className="w3-post-content ">
-     <PostsForm/>
-     <PostsForm/>
-              </div>
-               {/**End Newsfeed */}
-            </div>
-            </div>
-            </div>
-            {/*End Middle Column Half*/}
-
-  {/*Start Right Column Quarter*/}
-            <div className="w3-quarter flex-column justify-content-center align-items-center"> 
-            <div className="container ">
-            <div className="border border-2 rounded"> 
-    
-                      {/**start Upgrade */}
-                      <div className="bg-danger-subtle">
-       <div className="px-5 py-4">
-                        <h5 className="fw-bolder">
-                          Upgrade to Premium <b>+</b>
-                        </h5>
-
-                        <h6 className="w3-margin-top small text-danger">
-                          <i>
-                            {" "}
-                            Enjoy additional benefits, zero ads and the largest
-                            reply prioritization.{" "}
-                          </i>
-                        </h6>
-                        <div className=" text-end my-3">
-                          <button className=" btn btn-outline-dark rounded-5 w-100">
-                            {" "}
-                            Upgrade Now
-                          </button>
-                        </div>
-                        </div>
-                        </div>
-                    {/**end Upgrade */}
 
 
 
-                                 {/**start Upgrade */}
-                                 <div className="border-top border-bottom border-danger bg-black">
-
-       <div className="px-5 py-4 text-center">
-                        <h3 className="fw-bolder text-light">
-                       Marketplace
-                        </h3>
-                        <p className="small my-2 text-light fw-light text-uppercase">Track progress in a single location</p>
-                        <h6 className="small text-light">
-                        Barter, Buy, Advertise or Trade-
-                          <i className=" fw-light">
-                            {" "}
-              Check out the beauPro marketplace for like-minded professionals.{" "}
-                          </i>
-                        </h6>
-             
-                     <i className="fab fa-shopify mx-1" style={{color:'#32CD32'}}></i>
-                     <i className="fab fa-pinterest  mx-1" style={{color:'red'}}></i>
-                     <i className="fab fa-etsy mx-1" style={{color:'#ff7518'}}></i>
-                     <i className="fab fa-ebay text-white mx-1"></i>
-                     <i className="fab fa-facebook text-primary mx-1"></i>
-                     <i className="fab fa-tiktok mx-1" style={{color:'purple'}}></i>
-                      
-                        <div className=" text-end my-3">
-                          <button className=" btn btn-outline-light rounded-5 w-100">
-                            {" "}
-                         Learn How
-                          </button>
-                        </div>
-                        </div>
-                        </div>
-                    {/**end Upgrade */}
-
-       <ExploreBusiness/>
-<ExploreTopics/>  
-<ExploreJobs/>  
-<ExploreClasses/>  
-          
-          {/*End Right Column Quarter*/}
-     
-            {/*} End Grid*/}
-          </div>
-          {/*}End Main row*/}
-        </div>
-        </div>
-        </div>
-
-
-      <div className="w3-container w3-content text-center w3-padding-48 w3-margin-bottom w3-padding-small">
-        <footer className="text-muted py-5 position-fixed bottom-0 start-0 w-100">
-          <div className="container">
-            <p className="float-end">
-            <a href="#profile" className="btn-float">
-   Create Post +
-  </a>
-            </p>
-          </div>
-        </footer>
       </div>
-    </div>
+ 
   );
 }

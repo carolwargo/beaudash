@@ -1,17 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import GirlCamera from "../../assets/images/GirlCamera.png";
-import ResumeDownload from "../../assets/ResumeDownload.pdf";
-import { FaGoogle } from "react-icons/fa";
-import { FaMicrosoft } from "react-icons/fa"; // Font Awesome
-import { SiAdobecreativecloud } from "react-icons/si"; // Font Awesome
 import "bootstrap/dist/css/bootstrap.min.css";
-import DashboardProfile from "../../components/DashboardComponents/DashboardProfile/DashboardProfile";
 
-export default function ResumePage() {
+export default function DashboardPage() {
   return (
-    <div className=" container-fluid">
-        <DashboardProfile/>
-    </div>
+    <div className="dashboard-page" id="dashboard-page">
+      <div className="container-fluid">
+      {/** Start Main container */}
+
+          {/*} Start Main row*/}
+          <div className="w3-row-padding justify-content-center w3-white align-items-center">
+            {/*Start Left Column*/}
+            <div className="w3-quarter flex-column justify-content-center align-items-center"> 
+       </div>
+       <div className="w3-half flex-column justify-content-center align-items-center"> 
+       </div>
+       <div className="w3-quarter flex-column justify-content-center align-items-center"> 
+       </div>
+       </div>
+       </div>
+       </div>
   );
 }
