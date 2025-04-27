@@ -26,10 +26,10 @@ import PostsForm from "../../Posts/PostForm/PostForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
 //import CustomUserSocialIcons from "../CustomUserSocialIcons/CustomUserSocialIcons"; // Import CustomUserSocialIcons component
-import ExploreTopics from "../ExplorePosts/ExploreTopics";
-import ExploreBusiness from "../ExplorePosts/ExploreBusiness";
-import ExploreJobs from "../ExplorePosts/ExploreJobs";
-import ExploreClasses from "../ExplorePosts/ExploreClasses";
+import ExploreTopics from "../Explore/ExplorePosts/ExploreTopics";
+import ExploreBusiness from "../Explore/ExplorePosts/ExploreBusiness";
+import ExploreJobs from "../Explore/ExplorePosts/ExploreJobs";
+import ExploreClasses from "../Explore/ExplorePosts/ExploreClasses";
 
 export default function DashboardProfile() {
   return (

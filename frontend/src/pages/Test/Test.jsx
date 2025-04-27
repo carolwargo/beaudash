@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import './Test.css';
-import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import DashboardSidebar from '../../components/DashboardComponents/Sidebar';
 
 export default function TestInput() {
   return (

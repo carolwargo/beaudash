@@ -1,28 +1,60 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
-import Home from './pages/Home'; // Import Home component
+import HomePage from './pages/HomePage'; // Import Home component
 import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary component
-import DashboardPage from './pages/Dashboard/DashboardPage';  
-import UserProfile from './pages/UserProfile/UserProfile'; // Import UserProfilePage component  
+
+import Layout from './Layouts/Layout';
+
+import DashboardPage from './pages/DashboardPage';  
+import UserProfile from './pages/Profile/Profile'; // Import UserProfilePage component  
+import Home from './pages/Home'; // Import UserHome component
 import Test from './pages/Test/Test'; // Import Test component  
-import './App.css';
+import DashboardLayout from './Layouts/DashboardLayout'; // Import DashboardLayout component
+import ProfileLayout from './Layouts/ProfileLayout'; // Import ProfileLayout component
+import HomeLayout from './Layouts/HomeLayout'; // Import HomeLayout component
+import AuthProvider from './context/AuthProvider';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './index.css'; // Import global CSS
+import './App.css';
 
 function App() {
   return (
     <div className="App">
+         <AuthProvider>
       <BrowserRouter basename='/beaudash'>
         <ErrorBoundary>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/user" element={<UserProfile/>} /> {/* User profile route */}
-            <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
-            <Route path="/test" element={<Test />} /> {/* Test route */}
+
+
+        {/* Public Website Homepage */}
+  <Route path="/" element={<HomePage />} />
+
+{/* User Home (with Drawer layout) */}
+<Route element={<Layout />}>
+  <Route path="/home" element={<Home />} />
+  <Route path="/home/test" element={<Test />} />
+</Route>
+
+{/* Dashboard (with Dashboard layout) */}
+<Route path="/dashboard" element={<DashboardLayout />}>
+  <Route index element={<DashboardPage />} /> {/* /dashboard */}
+  <Route path="test" element={<Test />} /> {/* /dashboard/test */}
+</Route>
+
+
+                    {/* Dashboard layout routes */}
+        <Route path="/profile" element={<ProfileLayout />}>
+        <Route index element={<UserProfile />} />
+              <Route path="user" element={<UserProfile />} /> {/* /dashboard/user */}
+              <Route path="test" element={<Test />} /> {/* /dashboard/test */}
+            </Route>
+
+
+   
           </Routes>
         </ErrorBoundary>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

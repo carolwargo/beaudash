@@ -1,35 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GirlCamera from "../../../assets/images/GirlCamera.png";
-import ResumeDownload from "../../../assets/ResumeDownload.pdf";
-import { FaGoogle } from "react-icons/fa";
-import { FaMicrosoft } from "react-icons/fa"; // Font Awesome
-import { SiAdobecreativecloud } from "react-icons/si"; // Font Awesome
-
-import Badge from 'react-bootstrap/Badge';
-import { PiHairDryerFill } from "react-icons/pi";
-import { GiLargePaintBrush } from "react-icons/gi";
-import { FaHandHoldingDroplet } from "react-icons/fa6";
-import { TbRazorElectric } from "react-icons/tb";
-import { TbMassage } from "react-icons/tb";
-import { RiSyringeFill } from "react-icons/ri";
-import { BsSunglasses } from "react-icons/bs";
-import { GiSyringe } from "react-icons/gi";
-import { FaSwimmingPool } from "react-icons/fa";
-import { GiFootprint } from "react-icons/gi";
-import { MdOutlineBoy } from "react-icons/md";
-import { MdOutlineGirl } from "react-icons/md";
-import { GiCrystalEarrings } from "react-icons/gi";
-import { PiNeedleDuotone } from "react-icons/pi";
 import Nav from 'react-bootstrap/Nav';
 import PostsForm from "../../Posts/PostForm/PostForm";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DashboardProfile.css"; // Import CSS for styling
-import ExploreTopics from "../ExplorePosts/ExploreTopics";
-import ExploreBusiness from "../ExplorePosts/ExploreBusiness";
-import ExploreJobs from "../ExplorePosts/ExploreJobs";
-import ExploreClasses from "../ExplorePosts/ExploreClasses";
+
 
 export default function DashboardProfile() {
   return (
