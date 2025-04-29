@@ -1,63 +1,13 @@
 import React from "react";
-import GirlCamera from "../../assets/images/GirlCamera.png"; // Update path as needed
-import HeaderBanner from "../../assets/images/HeaderBanner.png"; // Update path as needed
+import GirlCamera from "../../assets/images/GirlCamera.png";
+import HeaderBanner from "../../assets/images/HeaderBanner.png";
+import './Header.css';
 import { MdVerified } from "react-icons/md";
 
-const Header = () => {
+function Header() {   // ✅ Now it’s a function component!
   return (
-    <div>
-      <style>
-        {`
-          .social-header {
-            position: relative;
-            height: 200px; /* Fixed height for banner */
-          }
-
-          .header-banner {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block; /* Ensure image respects container boundaries */
-          }
-
-          .profile-container {
-            position: absolute;
-            bottom: 0;
-            left: 20px;
-            transform: translateY(70%); /* Move half of the profile pic below banner */
-            display: flex;
-            flex-direction: column; /* Stack image and text vertically */
-            align-items: flex-start; /* Align items to the left */
-            z-index: 10; /* Ensure entire container is above banner */
-          }
-
-          .profile-image {
-            width: 115px;
-            height: 115px;
-            border: 6px solid #fff;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-
-          .profile-text {
-            margin-bottom: 10px;
-        
-          }
-
-          .profile-text h2 {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin: 0;
-            color: #000; /* Black text */
-          }
-
-          .profile-text p {
-            font-size: 1.1rem;
-            margin: 0;
-          }
-        `}
-      </style>
-      <div className="social-header w-100">
+ 
+      <div className="social-header">
         {/* Background Banner */}
         <img
           src={HeaderBanner}
@@ -65,28 +15,28 @@ const Header = () => {
           className="header-banner"
         />
 
-        {/* Profile Picture and Text */}
-        <div className="profile-container">
+        {/* Profile Image + Info */}
+        <div className="profile-overlay">
           <img
             src={GirlCamera}
             alt="Profile"
             className="profile-image"
           />
-          <div className="profile-text">
-            <h2>
+
+          <div className="profile-info">
+            <h2 className="mb-0">
               Jocelyn Doe{" "}
               <span>
-                <MdVerified
-                  style={{ fontSize: "1.2rem", color: "#007bff" }}
-                />
+                <MdVerified style={{ color: "#0d6efd", fontSize: "1.2rem" }} />
               </span>
             </h2>
-            <p className="text-secondary">Title | Creative Designer</p>
+            <p className=" text-muted">@username</p>
+            <p className=" text-muted my-1"><i className=" bi-calendar-check" style={{fontSize:'.85rem'}}></i> Joined April 2001</p>
+            <p className=" text-muted "><span className="text-black fw-bold"  style={{marginRight:'5px'}}>123</span><span  style={{marginRight:'10px'}}>Followers</span> <span className="text-black fw-bold">321</span><span style={{marginLeft:'5px'}}>Following</span> </p>
           </div>
         </div>
       </div>
-    </div>
   );
-};
+}
 
 export default Header;

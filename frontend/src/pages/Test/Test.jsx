@@ -1,14 +1,13 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 import './Test.css';
-import DashboardSidebar from '../../components/DashboardComponents/Sidebar';
+import Header from '../../components/Header/Header';
 
 export default function TestInput() {
   return (
 
 
     <div>
-      <DashboardSidebar />
+      <Header />
        {/**<Form.Control type="text" className="custom-input" placeholder="Test" />*/}
 
 

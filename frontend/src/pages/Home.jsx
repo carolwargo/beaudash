@@ -1,15 +1,17 @@
 import React from "react";  
-//import Sidebar from "../components/Navigation/Sidebar";    
-const UserHome = () => {    
+import Newsfeed from "../components/Newsfeed/Newsfeed"; 
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
-    return (    
-        <div className="container-fluid">    
+const Home = () => {    
+  return (  
+      
+<div className="d-flex justify-content-center">
+  <div className="w-100" style={{ maxWidth: "100%", padding: "0 1rem" }}>
+    <Newsfeed />
+  </div>
+</div>
 
-            <h1>User Home</h1>    
-            <p>Welcome to the User Home page!</p>    
-        </div>    
-    );
+  );
 }
 
-
-export default UserHome;
+export default Home;

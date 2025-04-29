@@ -9,6 +9,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import GirlCamera from '../../assets/images/GirlCamera.png';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -26,7 +29,7 @@ const menuItems = [
   { to: '/settings', icon: 'bi-gear', label: 'Settings' },
 ];
 
-export default function AnchorTemporaryDrawer() {
+export default function NavbarWithDrawer() {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const [open, setOpen] = React.useState(false);
@@ -39,51 +42,49 @@ export default function AnchorTemporaryDrawer() {
   };
 
   const drawerContent = (
+    <div className=' w-100'>  
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        justifyContent: 'center',
-        p: 3,
+        px: 3,
       }}
       role="presentation"
       onClick={!isLargeScreen ? toggleDrawer(false) : undefined}
       onKeyDown={!isLargeScreen ? toggleDrawer(false) : undefined}
     >
-{/* Avatar Section */}
-<Box
-  sx={{
-    display: { xs: 'flex', lg: 'none' }, // 👈 SHOW on small, HIDE on large
-    flexDirection: 'column',
-    marginLeft: 2,
-    justifyContent: 'flex-start',
-    mb: 2,
-    width: '100%',
-  }}
->
-  <Avatar
-    alt="Profile Picture"
-    src={GirlCamera}
-    sx={{
-      width: 50,
-      height: 50,
-      border: '3px solid rgb(253, 253, 253)',
-      boxShadow: 3,
-      mb: 1,
-      mt: 3,
-    }}
-  />
-  <h6 style={{ margin: 0 }}>User Name</h6>
-  <p className="text-muted" style={{ margin: 0 }}>@username</p>
-  <p style={{ margin: 0, fontSize: '13px' }}>
-    Followers
-    <span className="text-muted fw-light" style={{ marginRight: '10px' }}> 100 </span>
-    {" "}Following
-    <span className="text-muted fw-light"> 100</span>
-  </p>
-</Box>
-
+      {/* Avatar Section */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          mb: 2,
+        }}
+      >
+        <Avatar
+          alt="Profile Picture"
+          src={GirlCamera}
+          sx={{
+            width: 50,
+            height: 50,
+            border: '3px solid rgb(253, 253, 253)',
+            boxShadow: 3,
+            mb: 1,
+            mt: 3,
+          }}
+        />
+        <Typography variant="h6" sx={{ m: 0 }}>
+          User Name
+        </Typography>
+        <Typography variant="caption" color="text.secondary" sx={{ m: 0 }}>
+          @username
+        </Typography>
+        <Typography variant="body2" sx={{ fontSize: '13px', m: 0 }}>
+          Followers <span style={{ fontWeight: 300 }}>100</span> Following <span style={{ fontWeight: 300 }}>100</span>
+        </Typography>
+      </Box>
 
       {/* Menu List */}
       <List sx={{ width: '100%' }}>
@@ -99,22 +100,38 @@ export default function AnchorTemporaryDrawer() {
         ))}
       </List>
     </Box>
+    </div>
   );
 
   return (
+       <div className='w-100'>  
     <Box sx={{ display: 'flex' }}>
-      {!isLargeScreen && (
-        <IconButton
-          onClick={toggleDrawer(true)}
-          sx={{ p: 2, m: 1 }}
-        >
-          <Avatar
-            alt="Profile Picture"
-            src={GirlCamera}
-            sx={{ width: 50, height: 50, border: '2px solid #fff', boxShadow: 2 }}
-          />
-        </IconButton>
-      )}
+      {/* Navbar at the top */}
+      <AppBar position="fixed" color="default" sx={{ bgcolor: 'background.paper', boxShadow: 1 }}>
+        <Toolbar>
+{/* Show avatar button on mobile to toggle drawer */}
+{!isLargeScreen && (
+  <IconButton
+    edge="start"
+    color="inherit"
+    aria-label="menu"
+    onClick={toggleDrawer(true)}
+    sx={{ mr: 2 }}
+  >
+    <Avatar
+      alt="Profile Picture"
+      src={GirlCamera}
+      sx={{ width: 40, height: 40 }}
+    />
+  </IconButton>
+)}
+          <Typography variant="h6" noWrap component="div">
+            www.brand.com
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
+      {/* Drawer */}
       <Drawer
         variant={isLargeScreen ? 'permanent' : 'temporary'}
         open={isLargeScreen ? true : open}
@@ -125,6 +142,7 @@ export default function AnchorTemporaryDrawer() {
             width: 300,
             boxSizing: 'border-box',
             overflowY: 'auto',
+            pt: '64px', // push content down under AppBar
             scrollbarWidth: 'none',
             '&::-webkit-scrollbar': {
               display: 'none',
@@ -134,6 +152,9 @@ export default function AnchorTemporaryDrawer() {
       >
         {drawerContent}
       </Drawer>
+
+  
     </Box>
+     </div>
   );
 }

@@ -1,57 +1,131 @@
-import React from "react";
+import React, { useState } from "react";
 import GirlCamera from "../../../assets/images/GirlCamera.png";
-import "./PostsForm.css";
 import { Link } from "react-router-dom";
 
-const UserPostForm = () => {
+const PostForm = () => {
+  // --- NEW: manage "View More" state
+  const [showMore, setShowMore] = useState(false);
+
+  // --- NEW: toggle function
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
-    <div className="mt-2">
-      <div className="border border-secondary-subtle border-2 rounded">
-        <div className="my-padding-large ">
+
+    <div>
+      <style>{`
+      .post-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align everything to left */
+}
+
+.post-img-title {
+  display: flex;
+  align-items: center; /* vertically center image and title */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  text-align: center; /* optional, if you want to center everything */
+  margin-bottom: 5px;
+}
+
+.card-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+
+
+.post-date {
+  margin-top: 0px;
+  font-size: 12px;
+}
+
+
+.likes-shares {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* optional: remove default paragraph spacing */
+  padding: 0; /* optional: adds spacing on left/right */
+  font-size: 12px;
+}
+
+.post-text-wrapper {
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.post-text-collapsed {
+  max-height: 80px;
+  opacity: 0.8;
+}
+
+.post-text-expanded {
+  max-height: 1000px;
+  opacity: 1;
+}
+`}</style>
+
+    <div className="mt-3">
+      <div className="card">
+        <div className="my-padding-large">
           <div className="post-wrapper">
-          <div className="post-img-title">
-  <img
-    src={GirlCamera}
-    alt="event"
-    className="post-img rounded-circle shadow"
-  />
-  
-  <div className="post-text mt-3">
-    <h5 className="post-title">TITLE (EVENT)</h5>
-    <p className="post-date">April 15, 2025</p>
-  </div>
-</div>
+            
+            {/* Profile image + Title */}
+            <div className="post-img-title">
+              <img src={GirlCamera} alt="Profile" className="card-img" />
+              <div className="post-text">
+                <p className="post-title">TITLE (EVENT)</p>
+                <p className="post-date small">April 15, 2025</p>
+              </div>
+            </div>
 
+            {/* Post text with collapse/expand */}
+            <div className={`post-text-wrapper ${showMore ? "post-text-expanded" : "post-text-collapsed"}`}>
+              <p className="small m-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+                pariatur minima harum recusandae perspiciatis obcaecati, ipsa
+                laborum vero quas quis. Autem cumque nulla quasi sequi cum ad!
+                Dolores, voluptas quasi.
+              </p>
+            </div>
 
-            <p className="small">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              pariatur minima harum recusandae perspiciatis obcaecati, ipsa
-              laborum vero quas quis. Autem cumque nulla quasi sequi cum ad!
-              Dolores, voluptas quasi.
-            </p>
-
-            <img src={GirlCamera} alt="girl camera" className="w-100" />
-          </div>
-          <p className="likes-shares">
-            <span>
-              Likes <b className="text-danger">12</b>
-            </span>
-            <span>
-              Shares <b className="text-danger">12</b>
-            </span>
-          </p>
-
-          <div className="text-end my-3">
-            <Link
-              to={"/"}
-              className="button text-decoration-none"
-              id="download"
-              download
-            >
-              <button className="btn my-black w-100 my-hover-opacity">
-                Message
+            {/* View More/Less Button */}
+            <div className="text-center mt-2">
+              <button onClick={toggleShowMore} className="btn btn-link p-0">
+                View {showMore ? "Less" : "More"}
               </button>
-            </Link>
+            </div>
+
+            {/* Post Image */}
+            <img src={GirlCamera} alt="Post" className="post-image w-100" />
+
+            {/* Likes / Shares */}
+            <div className="likes-shares mt-2">
+              <span>Likes <b className="text-danger">12</b></span>
+              <span>Shares <b className="text-danger">12</b></span>
+            </div>
+
+            {/* Message Button */}
+            <div className="text-end my-3">
+              <Link to={"/"} className="button text-decoration-none" id="download" download>
+                <button className="btn my-black w-100 my-hover-opacity">
+                  Message
+                </button>
+              </Link>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -59,4 +133,4 @@ const UserPostForm = () => {
   );
 };
 
-export default UserPostForm;
+export default PostForm;

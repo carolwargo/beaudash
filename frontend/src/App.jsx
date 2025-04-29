@@ -11,7 +11,6 @@ import Home from './pages/Home'; // Import UserHome component
 import Test from './pages/Test/Test'; // Import Test component  
 import DashboardLayout from './Layouts/DashboardLayout'; // Import DashboardLayout component
 import ProfileLayout from './Layouts/ProfileLayout'; // Import ProfileLayout component
-import HomeLayout from './Layouts/HomeLayout'; // Import HomeLayout component
 import AuthProvider from './context/AuthProvider';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -28,17 +27,16 @@ function App() {
 
         {/* Public Website Homepage */}
   <Route path="/" element={<HomePage />} />
+  <Route path="/test" element={<Test />} />
 
 {/* User Home (with Drawer layout) */}
 <Route element={<Layout />}>
   <Route path="/home" element={<Home />} />
-  <Route path="/home/test" element={<Test />} />
 </Route>
 
 {/* Dashboard (with Dashboard layout) */}
 <Route path="/dashboard" element={<DashboardLayout />}>
   <Route index element={<DashboardPage />} /> {/* /dashboard */}
-  <Route path="test" element={<Test />} /> {/* /dashboard/test */}
 </Route>
 
 
@@ -46,7 +44,6 @@ function App() {
         <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<UserProfile />} />
               <Route path="user" element={<UserProfile />} /> {/* /dashboard/user */}
-              <Route path="test" element={<Test />} /> {/* /dashboard/test */}
             </Route>
 
 

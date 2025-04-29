@@ -1,8 +1,9 @@
+//components/Layouts/ProfileLayout.jsx
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Drawer from '../components/Navigation/Drawer'; // Adjust the import path as necessary
+import Drawer from '../components/Navigation/Drawer'
 
-const Layout = () => {
+const ProfileLayout = () => {
   return (
     <div className="d-flex">
       <Drawer /> {/* Assuming you have a Drawer component for navigation */}
@@ -13,4 +14,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default ProfileLayout;
