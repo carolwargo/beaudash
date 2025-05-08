@@ -12,7 +12,7 @@ export default function Newsfeed() {
 
 <UserNav/>
       {/* Add extra spacer div */}
-      <div style={{ height: "100px" }}></div> {/* You can adjust the 100px as needed */}
+      <div className="mt-5"></div> {/* You can adjust the 100px as needed */}
 
       {/* Start Newsfeed */}
       <div className="container-fluid w-100">

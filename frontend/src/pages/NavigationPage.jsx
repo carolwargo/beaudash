@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-const ProfilePage = () => {
+const NavigationPage = () => {
   return (
     <div className="p-4">
       <h1>Profile</h1>
@@ -13,4 +13,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default NavigationPage;

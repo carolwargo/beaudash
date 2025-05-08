@@ -7,10 +7,18 @@ import Layout from './Layouts/Layout';
 
 import DashboardPage from './pages/DashboardPage';  
 import UserProfile from './pages/Profile/Profile'; // Import UserProfilePage component  
+
+
+import ClassesPage from './pages/ClassesPage';
+import CheckoutPage from './pages/CheckoutPage';
+import SocialmediaPage from './pages/SocialMediaPage/SocialMediaPage';
+
+
+import NavigationPage from './pages/NavigationPage'
 import Home from './pages/Home'; // Import UserHome component
 import Test from './pages/Test/Test'; // Import Test component  
 import DashboardLayout from './Layouts/DashboardLayout'; // Import DashboardLayout component
-import ProfileLayout from './Layouts/ProfileLayout'; // Import ProfileLayout component
+import UserProfileLayout from './Layouts/UserProfileLayout'; // Import ProfileLayout component
 import AuthProvider from './context/AuthProvider';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -24,10 +32,13 @@ function App() {
         <ErrorBoundary>
           <Routes>
 
-
         {/* Public Website Homepage */}
   <Route path="/" element={<HomePage />} />
   <Route path="/test" element={<Test />} />
+  <Route path="/classes" element={<ClassesPage />} />
+  <Route path="/checkout" element={<CheckoutPage />} />
+  <Route path='/navpage' element={<NavigationPage/>}/>
+  <Route path="/social" element={<SocialmediaPage />} />
 
 {/* User Home (with Drawer layout) */}
 <Route element={<Layout />}>
@@ -41,7 +52,7 @@ function App() {
 
 
                     {/* Dashboard layout routes */}
-        <Route path="/profile" element={<ProfileLayout />}>
+        <Route path="/profile" element={<UserProfileLayout />}>
         <Route index element={<UserProfile />} />
               <Route path="user" element={<UserProfile />} /> {/* /dashboard/user */}
             </Route>
